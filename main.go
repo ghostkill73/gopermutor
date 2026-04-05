@@ -1,10 +1,10 @@
 package main
 
 import (
-	"fmt"
-	"sort"
-	"os"
 	"bytes"
+	"fmt"
+	"os"
+	"sort"
 )
 
 func main() {
@@ -14,9 +14,9 @@ func main() {
 
 	go permuteArgs(resultCh, list)
 
-    for p := range resultCh {
-        fmt.Println(p)
-    }
+	for p := range resultCh {
+		fmt.Println(p)
+	}
 }
 
 func permuteArgs(ch chan string, words []string) {
