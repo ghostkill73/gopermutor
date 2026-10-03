@@ -8,17 +8,13 @@ import (
 )
 
 func main() {
-	list := os.Args[1:]
+	words := os.Args[1:]
 
-	if len(list) == 0 {
-		fmt.Printf("Usage: %s <word1> [word2] [word3] ...\n", os.Args[0])
+	if len(words) == 0 {
+		fmt.Printf("Usage: %s [word1] [word2] ...\n", os.Args[0])
 		os.Exit(1)
 	}
 
-	permuteArgs(list)
-}
-
-func permuteArgs(words []string) {
 	sort.Strings(words)
 
 	var buffer bytes.Buffer
